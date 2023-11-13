@@ -1,0 +1,405 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 150px;
+    background-color: rgb(1, 1, 65);
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#inp {
+    border: none;
+    min-width: 300px;
+    height: 30px;
+    font-size: 18px;
+    font-family:'Times New Roman', Times, serif;
+    padding: 5px;
+}
+
+#inp::placeholder {
+    font-size: 18px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+#select {
+    width: 50px;
+    height: 30px;
+    background-color:rgb(0, 54, 50);
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+.btn {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.btn:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.btn:active {
+    color: #000
+}
+
+.btn:active:after {
+    background: transparent;
+}
+
+.btn:hover:before {
+    opacity: 1;
+}
+
+.btn:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
+.btn_back {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+
+.btn_back:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.btn_back:active {
+    color: #000
+}
+
+.btn_back:active:after {
+    background: transparent;
+}
+
+.btn_back:hover:before {
+    opacity: 1;
+}
+
+.btn_back:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+.output {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: rgb(198,2,2);
+    background: linear-gradient(90deg, rgba(198,2,2,0.7203256302521008) 0%, rgba(17,20,162,1) 76%, rgba(0,112,255,1) 100%);
+    min-height: 100vh;
+}
+
+.card {
+    flex: 0 1 23%;
+    margin-bottom: 30px;
+    cursor: pointer;
+    border-radius: 15px;
+    border: 3px solid black;
+    height: 300px;
+}
+
+.imgAllCoctail {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.titleAllCoctail {
+    font-size: 21px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+}
+
+.titleAllCoctail:hover {
+    color: rgb(0, 248, 227);
+}
+
+.list {
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.ingrCard {
+    margin: 20px auto;
+    width: 600px;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 15px;
+    border: 2px solid black;
+    padding: 15px;
+    gap: 15px;
+    background-color: rgb(2, 0, 20);
+}
+
+.ingrImg {
+    width: 100%;
+}
+
+.ingrTitle {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 25px;
+    text-align: center;
+    color: #fff;
+}
+.ingrDescription {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 18px;
+    text-align: justify;
+    color: #fff;
+}
+
+/* =============== */
+.cardDetail {
+    margin: 20px auto;
+    padding: 15px;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    border: 2px solid black;
+    border-radius: 15px;
+    height: auto;
+    background-color:rgb(88, 0, 139);
+    color: white;
+    cursor: pointer;
+    transition: linear .5s;
+}
+
+/* .cardDetail:hover {
+    transform: translateX(45deg);
+} */
+
+.blockDetail {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color:rgb(0, 54, 50);
+    color: white;
+}
+
+.imgDetail {
+    width: 100%;
+    border-radius: 15px;
+}
+
+
+
+
+/* ====================================
+.artboard {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+    height: 100%;
+    position: relative;
+  }
+  @media (max-width: 37.5em) {
+    .artboard {
+      padding: 1rem;
+    }
+  }
+  
+.blockIngr.card {
+    flex: initial;
+    position: relative;
+    height: 100%;
+    width: 48rem;
+    -moz-perspective: 200rem;
+    perspective: 200rem;
+    margin: 2rem;
+  }
+.card__side {
+    height: 100%;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    We don't want to see the back part of the element. */
+    /* backface-visibility: hidden; */
+    /* We don't want to see the back part of the element. */
+    /* border-radius: 3px;
+    overflow: hidden;
+    The image is overflowing the parent. */
+    /* box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.15);
+  }
+  .card__side--front {
+    background-image: linear-gradient(to right bottom, rgba(30, 11, 54, 0.65), rgba(202, 55, 130, 0.7)), url(https://cdn.spacetelescope.org/archives/images/screen/heic0406a.jpg);
+  }
+  .card__side--back {
+    background-color: #fff;
+    transform: rotateY(180deg);
+  }
+  .blockIngr .card:hover .card__side--back {
+    transform: rotateY(0);
+  }
+  .blockIngr .card:hover .card__side--front {
+    transform: rotateY(-180deg);
+  }
+  .card__theme {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 54%;
+    width: 90%;
+    text-align: center;
+  }
+  .card__theme-box {
+    color: #fff;
+    margin-bottom: 8rem;
+  }
+  .card__subject {
+    font-family: "Inconsolata", monospace;
+    letter-spacing: 0.8rem;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .card__title {
+    font-family: "VT323", monospace;
+    text-transform: uppercase;
+    font-size: 6rem;
+    font-weight: 100;
+  }
+  .card__cover {
+    position: relative;
+    background-size: cover;
+    height: 14rem;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-image: linear-gradient(to top right, rgba(30, 11, 54, 0.65), rgba(202, 55, 130, 0.65)), url(https://cdn.spacetelescope.org/archives/images/screen/heic0406a.jpg);
+  }
+  .card__heading {
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+  }
+  .card__heading-span {
+    font-family: "VT323", monospace;
+    font-size: 4.2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 1rem 1.5rem;
+    color: #fff;
+  }
+  .card__details {
+    font-family: "Inconsolata", monospace;
+    padding: 4rem 2rem;
+  }
+  .card__details ul {
+    list-style: none;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .card__details ul li {
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 1rem;
+  }
+  .card__details ul li:not(:last-child) {
+    border-bottom: 1px solid #eee;
+  }  */
